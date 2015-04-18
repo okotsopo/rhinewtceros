@@ -1,0 +1,15 @@
+/*
+FILE NAME: HelloWorld.css
+*/
+    
+body {
+        background-color: #b0c4de;
+        color: #191970;
+        font-family: Tahoma, Geneva, Verdana, sans-serif;
+}
+h2 {
+        border-bottom: thin dotted #191970;
+}
+h1 {
+        border-bottom: thick dotted #191970;
+}

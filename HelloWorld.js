@@ -2,7 +2,7 @@ function Tick() {
     var Today= new Date();
     var Selected = new Date(Today.getFullYear(), Today.getMonth(), Today.getDate(), military($('#hour').val(), $('#AMPM').val()), $('#minute').val(), 0);
     updateLabel(Today);
-	
+
     if (Today >= Selected) {
 	$('#message').text("Wake up now!");
     } else {

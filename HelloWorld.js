@@ -1,11 +1,13 @@
 function Tick() {
   var Today= new Date()
-  updateLabel(Today)
-}
-
-function compareTimes () {
-  new Date(now.getFullYear(), now.getMonth(), now.getDate(), 16, 55, 0)
-  var now = new Date();
+  var Hours= Today.getHours()
+  var AMPM = getAMPM(Hours)
+  Hours = unmilitary(Hours)
+  var Seconds= Today.getSeconds()
+  Seconds = addZero(Seconds)
+  var Minutes= Today.getMinutes()
+  Minutes = addZero(Minutes)
+  $('#button').html(Hours + ":" + Minutes + ":" + Seconds + " " + AMPM)
 }
 
 function addZero(i) {
@@ -39,17 +41,6 @@ function startUp() {
 
 function getMinutes() {
   for (minutes= 0; minutes<60; minutes++) {
-  $('#minute').append("<option value =" + minutes +">"+ addZero(minutes) + "</option>")
+  $('#minute').append("<option>"+ addZero(minutes) + "</option>")
   }
-}
-
-function updateLabel(Today) {
-  var Hours= Today.getHours()
-  var AMPM = getAMPM(Hours)
-  Hours = unmilitary(Hours)
-  var Seconds= Today.getSeconds()
-  Seconds = addZero(Seconds)
-  var Minutes= Today.getMinutes()
-  Minutes = addZero(Minutes)
-  $('#button').html(Hours + ":" + Minutes + ":" + Seconds + " " + AMPM)
 }

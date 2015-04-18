@@ -1,0 +1,98 @@
+body {
+	background: #b7cdf0;
+	font-size: 1.25em;
+	font-family: 'Raleway', sans-serif;
+}
+
+nav {
+	margin: 100px auto;
+	text-align: center;
+}
+
+nav ul {
+	margin-left: 0;
+	padding-left: 0;
+	width: 500px;
+	list-style: none;
+	position: relative;
+	display: inline-table;
+}
+
+nav ul ul {
+	display: none;
+}
+
+nav ul li:hover > ul {
+	display: block;
+}
+
+nav ul li {
+	float: left;
+	width: 500px;
+	text-align: left;
+	border-bottom: 3px solid #2ecc71;
+}
+
+nav ul li:hover {
+	background: #f2f2f2;
+}
+
+nav ul li a {
+	display: block;
+	padding: 15px 10px;
+	color: #2a2a2a;
+	text-decoration: none;
+}
+
+nav ul ul {
+	border-radius: 0px;
+	padding: 0;
+	position: absolute;
+	top: 100%;
+}
+
+nav ul ul li {
+	float: none;
+	border-bottom: 2px solid #eaeaea;
+	position: relative;
+}
+
+nav ul ul li a {
+	padding: 15px 10px;
+	color: #838383;
+}
+
+nav ul ul li a:hover {
+	background: #47d583;
+	color: #fff;
+}
+
+#down-triangle {
+	float: right;
+	width: 0;
+ 	height: 0;
+ 	margin-top: 10px;
+ 	border-top: 10px solid #2ecc71;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+}
+
+.circle {
+	float: right;
+	display: inline;
+	width: 10px;
+ 	height: 10px;
+ 	margin-top: 5px;
+  border: 3px solid #8ce5b2;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+}
+/*Copyright (c) 2015 by Dianatomic (http://codepen.io/Dianatomic/pen/HqICG)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+/*

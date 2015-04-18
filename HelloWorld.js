@@ -41,6 +41,6 @@ function startUp() {
 
 function getMinutes() {
   for (minutes= 0; minutes<60; minutes++) {
-  $('#minute').append("<option>"+ minutes+ "</option>")
+  $('#minute').append("<option>"+ addZero(minutes) + "</option>")
   }
 }

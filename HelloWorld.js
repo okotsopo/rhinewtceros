@@ -1,12 +1,13 @@
 function Tick() {
   var Today= new Date()
   var Hours= Today.getHours()
+  var AMPM = getAMPM(Hours)
   Hours = unmilitary(Hours)
   var Seconds= Today.getSeconds()
   Seconds = addZero(Seconds)
   var Minutes= Today.getMinutes()
   Minutes = addZero(Minutes)
-  $('#button').html(Hours + ":" + Minutes + ":" + Seconds)
+  $('#button').html(Hours + ":" + Minutes + ":" + Seconds + " " + AMPM)
 }
 
 function addZero(i) {
@@ -20,5 +21,14 @@ function unmilitary(hour) {
   }
   else {
     return hour
+  }
+}
+
+function getAMPM(hour) {
+  if (hour>=12) {
+    return "PM"
+  }
+  else {
+    return "AM"
   }
 }

@@ -3,10 +3,8 @@ function Tick() {
     var Selected = new Date(Today.getFullYear(), Today.getMonth(), Today.getDate(), military($('#hour').val(), $('#AMPM').val()), $('#minute').val(), 0);
     updateLabel(Today);
 
-    if (Today >= Selected) {
-	$('#message').text("Wake up now!");
-    } else {
-	$('#message').text("");
+    if (Today.getSeconds() == 0 && Today.getMinutes() == Selected.getMinutes()) {
+	     alert("Time to wake up!")
     }
 
 }

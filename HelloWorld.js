@@ -36,4 +36,11 @@ function getAMPM(hour) {
 function startUp() {
   Tick()
   setInterval(Tick,1000)
+  getMinutes()
+}
+
+function getMinutes() {
+  for (minutes= 0; minutes<60; minutes++) {
+  $('#minute').append("<option>"+ minutes+ "</option>")
+  }
 }

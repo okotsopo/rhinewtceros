@@ -38,10 +38,6 @@ function getSelectedDate(Today) {
     var hour = military($('#hour').val(), $('#AMPM').val());
     var minute = $('#minute').val();
 
-    if ((hour )
-
-  
-
 }
 
 function unmilitary(hour) {

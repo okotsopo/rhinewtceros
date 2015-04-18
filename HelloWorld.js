@@ -32,3 +32,8 @@ function getAMPM(hour) {
     return "AM"
   }
 }
+
+function startUp() {
+  Tick()
+  setInterval(Tick,1000)
+}

@@ -1,6 +1,14 @@
 function Tick() {
-  var Today= new Date()
-  updateLabel(Today)
+    var Today= new Date();
+    var Selected = new Date(Today.getFullYear(), Today.getMonth(), Today.getDate(), military($('#hour').val(), $('#AMPM').val()), $('#minute').val(), 0);
+    updateLabel(Today);
+	
+    if (Today >= Selected) {
+	$('#message').text("Wake up now!");
+    } else {
+	$('#message').text("");
+    }
+
 }
 
 function compareTimes () {
@@ -11,6 +19,15 @@ function compareTimes () {
 function addZero(i) {
 if (i<10) {i = "0" + i}; // add zero in front of numbers < 10
 return i;
+}
+
+function military(hour, AMPM) {
+    if (AMPM == "AM") {
+	return hour;
+    } else {
+	return parseInt(hour) + 12;
+    }
+
 }
 
 function unmilitary(hour) {

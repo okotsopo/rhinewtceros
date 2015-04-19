@@ -23,7 +23,7 @@ function Tick() {
       jAlert("You have to go to sleep in an hour", "Get excited!!")
       window.open('http://i.imgur.com/OfDUyyJ.png');
     }
-    if (Today.getSeconds() == 0 && Today.getMinutes() == SelectedMinus7Hours.getMinutes() && Today.getHours() != SelectedMinus9Hours.getHours() && Today.getHours() != SelectedMinus8Hours.getHours() && Today.getHours() >= SelectedMinus7Hours.getHours()) {
+    if (Today.getSeconds() == 0 && Today.getMinutes() == SelectedMinus7Hours.getMinutes() && Today.getHours() >= SelectedMinus7Hours.getHours()) {
       jAlert("Go to sleep, dammit.", "Not amused")
       window.open('http://i.imgur.com/IBBhbPb.jpg');
     }

@@ -3,6 +3,19 @@ function Tick() {
     var Selected = new Date(Today.getFullYear(), Today.getMonth(), Today.getDate(), military($('#hour').val(), $('#AMPM').val()), $('#minute').val(), 0);
     updateLabel(Today);
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+    if (Today >= Selected) {
+	$('#message').text("Wake up now!");
+    } else {
+	$('#message').text("");
+=======
+    var SelectedMinus8Hours = new Date(Selected);
+    SelectedMinus8Hours.setHours(SelectedMinus8Hours.getHours() - 8);
+
+    var SelectedMinus9Hours = new Date(Selected);
+    SelectedMinus9Hours.setHours(SelectedMinus9Hours.getHours() - 9);
+=======
     var SelectedMinus8Hours = new Date(Selected);
     SelectedMinus8Hours.setHours(SelectedMinus8Hours.getHours() - 8);
 
@@ -12,7 +25,32 @@ function Tick() {
     if (Today == SelectedMinus8Hours) {
       jAlert("Time to go to sleep!", "Sleeeeepp")
     }
+>>>>>>> parent of 3385ce3... ?
 
+    var SelectedMinus7Hours = new Date(Selected);
+    SelectedMinus7Hours.setHours(SelectedMinus7Hours.getHours() - 7);
+
+    if (Today.getSeconds() == 0 && Today.getMinutes() == Selected.getMinutes() && Today.getHours() == Selected.getHours()) {
+	     jAlert("Sleep no more!","Time to wake up!")
+       window.open('http://i.imgur.com/uTf4GRb.png'); 
+    }
+    if (Today.getSeconds() == 0 && Today.getMinutes() == SelectedMinus8Hours.getMinutes() && Today.getHours() == SelectedMinus8Hours.getHours()) {
+<<<<<<< HEAD
+      jAlert("Time to go to sleep!", "Sleeeeepp")
+>>>>>>> origin/master
+=======
+      jAlert("Time to go to sleep!", "Sleeeeepp");
+      window.open('http://i.imgur.com/aRunCsS.png');
+>>>>>>> 01394380cd2692c60785ecf63346644889f66fe3
+    }
+    if (Today.getSeconds() == 0 && Today.getMinutes() == SelectedMinus9Hours.getMinutes() && Today.getHours() == SelectedMinus9Hours.getHours()) {
+      jAlert("You have to go to sleep in an hour", "Get excited!!")
+      window.open('http://i.imgur.com/OfDUyyJ.png');
+    }
+    if (Today.getSeconds() == 0 && Today.getMinutes() == SelectedMinus7Hours.getMinutes() && Today.getHours() == SelectedMinus7Hours.getHours()) {
+      jAlert("Go to sleep, dammit.", "Not amused")
+      window.open('http://i.imgur.com/IBBhbPb.jpg');
+    }
 }
 
 function compareTimes () {

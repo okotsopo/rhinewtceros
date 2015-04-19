@@ -9,6 +9,9 @@ function Tick() {
     if (Today.getSeconds() == 0 && Today.getMinutes() == Selected.getMinutes()) {
 	jAlert("Sleep no more!","Time to wake up!")
     }
+    if (Today == SelectedMinus8Hours) {
+      jAlert("Time to go to sleep!", "Sleeeeepp")
+    }
 
 }
 

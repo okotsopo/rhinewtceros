@@ -13,7 +13,8 @@ function Tick() {
     SelectedMinus7Hours.setHours(SelectedMinus7Hours.getHours() - 7);
 
     if (Today.getSeconds() == 0 && Today.getMinutes() == Selected.getMinutes() && Today.getHours() == Selected.getHours()) {
-	jAlert("Sleep no more!","Time to wake up!")
+	     jAlert("Sleep no more!","Time to wake up!")
+       window.open('http://i.imgur.com/uTf4GRb.png'); 
     }
     if (Today.getSeconds() == 0 && Today.getMinutes() == SelectedMinus8Hours.getMinutes() && Today.getHours() == SelectedMinus8Hours.getHours()) {
       jAlert("Time to go to sleep!", "Sleeeeepp");

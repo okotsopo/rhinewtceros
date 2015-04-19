@@ -4,7 +4,7 @@ function Tick() {
     updateLabel(Today);
 
     if (Today.getSeconds() == 0 && Today.getMinutes() == Selected.getMinutes()) {
-	     alert("Time to wake up!")
+	jAlert("Sleep no more!","Time to wake up!")
     }
 
 }

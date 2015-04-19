@@ -6,10 +6,10 @@ function Tick() {
     var SelectedMinus8Hours = new Date(Selected);
     SelectedMinus8Hours.setHours(SelectedMinus8Hours.getHours() - 8);
 
-    if (Today.getSeconds() == 0 && Today.getMinutes() == Selected.getMinutes()) {
+    if (Today.getSeconds() == 0 && Today.getMinutes() == Selected.getMinutes() && Today.getHours() == Selected.getHours()) {
 	jAlert("Sleep no more!","Time to wake up!")
     }
-    if (Today == SelectedMinus8Hours) {
+    if (Today.getSeconds() == 0 && Today.getMinutes() == SelectedMinus8Hours.getMinutes() && Today.getHours() == SelectedMinus8Hours.getHours()) {
       jAlert("Time to go to sleep!", "Sleeeeepp")
     }
 

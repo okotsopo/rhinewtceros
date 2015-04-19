@@ -3,6 +3,9 @@ function Tick() {
     var Selected = new Date(Today.getFullYear(), Today.getMonth(), Today.getDate(), military($('#hour').val(), $('#AMPM').val()), $('#minute').val(), 0);
     updateLabel(Today);
 
+    var SelectedMinus8Hours = new Date(Selected);
+    SelectedMinus8Hours.setHours(SelectedMinus8Hours.getHours() - 8);
+
     if (Today.getSeconds() == 0 && Today.getMinutes() == Selected.getMinutes()) {
 	jAlert("Sleep no more!","Time to wake up!")
     }

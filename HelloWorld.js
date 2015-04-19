@@ -13,7 +13,7 @@ function Tick() {
     SelectedMinus7Hours.setHours(SelectedMinus7Hours.getHours() - 7);
 
     if (Today.getSeconds() == 0 && Today.getMinutes() == Selected.getMinutes() && Today.getHours() == Selected.getHours()) {
-	    jAlert("Sleep no more!","Time to wake up!")
+	jAlert("Sleep no more!","Time to wake up!")
     }
     if (Today.getSeconds() == 0 && Today.getMinutes() == SelectedMinus8Hours.getMinutes() && Today.getHours() == SelectedMinus8Hours.getHours()) {
       jAlert("Time to go to sleep!", "Sleeeeepp");
@@ -23,7 +23,7 @@ function Tick() {
       jAlert("You have to go to sleep in an hour", "Get excited!!")
       window.open('http://i.imgur.com/OfDUyyJ.png');
     }
-    if (Today.getSeconds() == 0 && Today.getMinutes() == SelectedMinus7Hours.getMinutes() && Today.getHours() >= SelectedMinus7Hours.getHours()) {
+    if (Today.getSeconds() == 0 && Today.getMinutes() == SelectedMinus7Hours.getMinutes() && Today.getHours() == SelectedMinus7Hours.getHours()) {
       jAlert("Go to sleep, dammit.", "Not amused")
       window.open('http://i.imgur.com/IBBhbPb.jpg');
     }
